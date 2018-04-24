@@ -1,34 +1,19 @@
-package Lista06_04_18CoesaoPlanejamento;
+package OCP;
 
 public abstract class Funcionario {
-
 	private String nome;
-	private double incentivo = 180;
+	private String cargo;
 	private double salarioBase;
 	
-	public Funcionario(String nome, double salarioBase) {
-		super();
+	public Funcionario(String nome, String cargo, double salarioBase) {
 		this.nome = nome;
+		this.cargo = cargo;
 		this.salarioBase = salarioBase;
 	}
 
-	public double getIncentivo() {
-		return incentivo;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public double getSalarioBase() {
-		return salarioBase;
-	}
+	public abstract double calcula();
 	
-	abstract double calculaSalario();
-
-
+	public String getNome() {return nome;}
+	public String getCargo() {return cargo;}
+	public double getSalarioBase() {return salarioBase;}
 }

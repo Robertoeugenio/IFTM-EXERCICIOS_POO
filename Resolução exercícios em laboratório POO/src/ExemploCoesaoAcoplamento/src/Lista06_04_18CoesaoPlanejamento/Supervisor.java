@@ -1,20 +1,10 @@
-package Lista06_04_18CoesaoPlanejamento;
-import java.util.ArrayList;
+package OCP;
 
-
-import java.util.List;
-public class Supervisor extends Funcionario{
-	
-	private double salario;
-	
+public class Supervisor extends Funcionario {
 	public Supervisor(String nome, double salarioBase) {
-		super(nome, salarioBase);
-	}
-	
-	public double calculaSalario() {
-		salario = getSalarioBase() * 1.5 + getIncentivo();
-		
-		return salario;
+		super(nome, "Supervisor", salarioBase);
 	}
 
+	@Override
+	public double calcula() {return getSalarioBase() * 1.5;}
 }

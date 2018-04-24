@@ -1,18 +1,12 @@
-package Lista06_04_18CoesaoPlanejamento;
+package OCP;
 
 public class Gerente extends Funcionario {
-	
-	private double salario;
 
 	public Gerente(String nome, double salarioBase) {
-		super(nome, salarioBase);
-		
-	}
-	
-	public double calculaSalario() {
-		salario = 2 * getSalarioBase() + getIncentivo();
-		
-		return salario;
+		super(nome, "Gerente", salarioBase);
 	}
 
+	public double calcula() {
+		return 2 * getSalarioBase();
+	}
 }

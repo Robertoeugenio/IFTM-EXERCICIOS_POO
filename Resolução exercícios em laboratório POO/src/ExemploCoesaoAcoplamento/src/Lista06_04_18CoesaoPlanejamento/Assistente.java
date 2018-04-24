@@ -1,16 +1,11 @@
-package Lista06_04_18CoesaoPlanejamento;
+package OCP;
 
 public class Assistente extends Funcionario {
-	private double salario;
 
-public Assistente(String nome, double salarioBase) {
-		super(nome, salarioBase);
-}
-
-	public double calculaSalario() {
-		salario = getSalarioBase() + getIncentivo();
-
-		return salario;
+	public Assistente(String nome,double salarioBase) {
+		super(nome, "Assistente", salarioBase);
 	}
 
+	@Override
+	public double calcula() {return getSalarioBase();}
 }

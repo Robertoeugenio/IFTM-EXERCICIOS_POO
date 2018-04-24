@@ -1,23 +1,19 @@
-package Lista06_04_18CoesaoPlanejamento;
-
+package OCP;
 public class Vendedor extends Funcionario {
-	
-	private double  salario, meta, totalVendas;
-	
+	private double totalDeVendas,meta;
 
-	
-	public Vendedor(String nome, double salarioBase, double totalVendas, double meta) {
-		super(nome, salarioBase);
-
+	public Vendedor(String nome, double salarioBase, double totalDeVendas,double meta) {
+		super(nome,"Vendedor", salarioBase);
+		this.totalDeVendas = totalDeVendas;
+		this.meta = meta;
 	}
-	
-	public double calculaSalario() {
-		
-		if (totalVendas > meta)
-			salario = getSalarioBase() + (totalVendas * 0.03) + 50 + getIncentivo();
+
+	@Override
+	public double calcula() {
+		if (totalDeVendas > meta) 
+			return getSalarioBase() + totalDeVendas*0.3 + 50;
 		else
-			salario = getSalarioBase() + (totalVendas * 0.03) + getIncentivo();
-		
-		return salario;
+			return getSalarioBase() + totalDeVendas * 0.3;
 	}
+
 }
