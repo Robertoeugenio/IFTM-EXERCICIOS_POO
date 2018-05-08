@@ -1,5 +1,5 @@
 package DIP;
-public class CarroDeCorrida {
+public class CarroDeCorrida implements Veiculo {
 
     private final int capacidadeTanqueCombustivel;
     private int quantidadeCombustivel;
